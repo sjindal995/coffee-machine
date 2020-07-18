@@ -61,3 +61,15 @@ func TestOutletUnavailability(t *testing.T) {
 
 	time.Sleep(3 * time.Second)
 }
+
+func TestUnavailableItem(t *testing.T) {
+	m := setupMachine()
+	m.SubmitRequirement("green_tea")
+	time.Sleep(1 * time.Second)
+}
+
+func TestUnavailableBeverage(t *testing.T) {
+	m := setupMachine()
+	m.SubmitRequirement("herbal_tea")
+	time.Sleep(1 * time.Second)
+}
